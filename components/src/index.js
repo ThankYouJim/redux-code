@@ -5,43 +5,40 @@ import CommentDetail from './CommentDetail';
 import ApprovalCard from './ApprovalCard';
 
 const App = () => {
-  return (
-    <div className="ui container comments">
-      <ApprovalCard>
-        <div>
-          <h4>Warning!</h4>
-          Are you sure you want to do this?
-        </div>
-      </ApprovalCard>
-
-      <ApprovalCard>
-        <CommentDetail
-          author="Sam"
-          timeAgo="Today at 4:45PM"
-          content="Nice blog post"
-          avatar={faker.image.avatar()}
-        />
-      </ApprovalCard>
-
-      <ApprovalCard>
-        <CommentDetail
-          author="Alex"
-          timeAgo="Today at 2:00AM"
-          content="I like the subject"
-          avatar={faker.image.avatar()}
-        />
-      </ApprovalCard>
-
-      <ApprovalCard>
-        <CommentDetail
-          author="Jane"
-          timeAgo="Yesterday at 5:00PM"
-          content="I like the writing"
-          avatar={faker.image.avatar()}
-        />
-      </ApprovalCard>
-    </div>
-  );
+	return (
+		<div className="ui container comments">
+			<ApprovalCard>
+				Notice
+			</ApprovalCard>
+			<ApprovalCard>
+				<CommentDetail
+					avatar={faker.image.avatar()}
+					author={faker.internet.userName()}
+					timeAgo="Today at 4.20pm"
+					text="lmao"
+					/>
+			</ApprovalCard>
+			<ApprovalCard>
+				<CommentDetail
+					avatar={faker.image.avatar()}
+					author="Admin"
+					timeAgo="Yesterday at 9:00am"
+					text="hh"
+					/>
+			</ApprovalCard>
+			<ApprovalCard>
+				<CommentDetail
+					avatar={faker.image.avatar()}
+					author="Guest"
+					timeAgo="Today at 8:03pm"
+					text="order corn"
+					/>
+			</ApprovalCard>
+		</div>
+	);
 };
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(
+	<App />,
+	document.getElementById('root')
+);

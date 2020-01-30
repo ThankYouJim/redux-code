@@ -1,0 +1,28 @@
++ You cannot print a js object as text in React (component)
+const obj = { text: 'hello' }
+> { obj }
+
++ in class component: the constructor is needed to get access to states
+
++ you can only set state like: this.state = { ... } in constructors. Other times must be setState
+
++ with introduction of Hooks, you can use const {foo, setFoo} = useState(bar);
+
++ to call an action to redux, there is no point doing something like
+	foo()
+
++ The action has to be sent to the connect function to be dispatched
+
++ An action is alway passed to the
+	connect(mapStateToProps, { foo })(bar)
+
++ import default_export, { named_export } from ...
+
++ on async/await action functions does not return a valid js object but instead a promise. Need to use a middleware to deal with it (this course uses redux-thunk)
+
++ using redux-thunk, action creators can return funtions in addition to action objects. The functions will get passed to dispatch and getState, wait for the request to finished, before getting to reducers.
+
++ TECHNICALLY you can change state inside a reducer. However the way redux work is that, as long as you're returning that same same from parameter, redux will not see that as a change.
+- return a new object instead
+
++ might want to revise chp 189-191 for the fetching and memoize
