@@ -26,3 +26,5 @@ const obj = { text: 'hello' }
 - return a new object instead
 
 + might want to revise chp 189-191 for the fetching and memoize
+
++ the create-react-app dev server will return index if it can't find a route unless configured. Unlike tranditional server that returns a 404.
