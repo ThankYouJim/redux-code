@@ -16,7 +16,6 @@ function validate(formValues) {
 }
 
 class StreamCreate extends React.Component {
-  
   renderError({error, touched}) {
     if (error && touched) {
       return(
@@ -32,7 +31,7 @@ class StreamCreate extends React.Component {
   }
 
   // renderInput(props) {
-  // just grab the input obj and spreading into <input />
+  // just deconstruct grab the input obj and spreading into <input />
   renderInput = ({ input, label, meta }) => {
     const className = `field ${meta.error && meta.touched ? 'error' : ''}`;
     return (
