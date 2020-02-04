@@ -28,3 +28,5 @@ const obj = { text: 'hello' }
 + might want to revise chp 189-191 for the fetching and memoize
 
 + the create-react-app dev server will return index if it can't find a route unless configured. Unlike tranditional server that returns a 404.
+
++ add ?debug_session=<name> to the url to get persisted state. Maybe be convienient to set up states and label the session name
