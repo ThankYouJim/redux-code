@@ -1,3 +1,3 @@
 # ReduxCode
 
-Companion repo for a course on Udemy!
+Exercise repo from the course https://www.udemy.com/course/react-redux/
